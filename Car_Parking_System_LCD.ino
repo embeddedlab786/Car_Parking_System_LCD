@@ -1,7 +1,11 @@
 #include <Servo.h> //includes the servo library
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
-LiquidCrystal_I2C lcd(0x27, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);
+
+const int LCD_COLUMNS = 20;
+const int LCD_ROWS = 4;
+
+LiquidCrystal_I2C lcd(0x27, LCD_COLUMNS,LCD_ROWS);
 
 Servo myservo;
 
@@ -115,6 +119,3 @@ if(digitalRead(ir_car4) == 0){S4=1;}
 if(digitalRead(ir_car5) == 0){S5=1;}
 if(digitalRead(ir_car6) == 0){S6=1;}  
 }
-
-
-
