@@ -39,7 +39,9 @@ pinMode(ir_back, INPUT);
 myservo.attach(3);
 myservo.write(90);
 
-lcd.begin(20, 4);  
+lcd.init();  
+lcd.backlight();
+
 lcd.setCursor (0,1);
 lcd.print("    Car  parking  ");
 lcd.setCursor (0,2);
